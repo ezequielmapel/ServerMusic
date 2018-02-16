@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/bootstrap-4.0.0/dist/css/bootstrap.min.css"
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <% for (var i=0;i<items.length;i++){ %>
+
+        <a class="btn btn-primary" name="<%= nItems[i] %>" href="<%= nItems[i] %>"><%= items[i]%></a><br><br>
+        <%};%>
+  </body>
+</html>
