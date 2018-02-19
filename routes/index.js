@@ -21,7 +21,7 @@ fs.readdir('musics/', function(err, items) {
     // Remover a extensão do arquivo
     for(var i= 0; i<items.length; i++){
         nItems.push(items[i].slice(0, items[i].length-4));
-        
+
 
     }
 
@@ -31,8 +31,17 @@ fs.readdir('musics/', function(err, items) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index.ejs', {title:'ServerMusic', items:tItems, nItems:nItems});
+    res.render('index.ejs', {title:':)', items:tItems, nItems:nItems});
 });
+
+router.get('/arq', function(req, res, next){
+    // -music.ejs- é o arquivo responsável por render os conteúdos de -data-
+    fs.readFile('musics/arq.txt', function(err, data) {
+        if (err) throw err;
+        res.render('music.ejs', {title:'', cbody:data});
+    });
+});
+
 
 
 

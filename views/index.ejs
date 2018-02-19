@@ -3,13 +3,46 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" href="/bootstrap-4.0.0/dist/css/bootstrap.min.css"
+    <link rel="stylesheet" href="/bootstrap-4.0.0/dist/css/bootstrap.min.css" />
+    
   </head>
   <body>
-    <h1><%= title %></h1>
-    <% for (var i=0;i<items.length;i++){ %>
+      <div class="container-fluid">
+         <div class="header">
+            <h1><%= title %></h1>
+         </div>
+      <div class="musics">
+            <h2 class='headerPlayer'>Play<h2>
+                <div class="buttonPlayer">
+                    <button type="button" id="button_fbw" class="btn" onclick='buttonRewindPress()'>
+                      <i class="fa fa-fast-backward"></i>
+                    </button>
 
-        <a class="btn btn-primary" name="<%= nItems[i] %>" href="<%= nItems[i] %>"><%= items[i]%></a><br><br>
-        <%};%>
+                    <button type="button" id="button_bw" class="btn" onclick='buttonBackPress()'>
+                      <i class="fa fa-backward"></i>
+                    </button>
+
+                    <button type="button" id="button_play" class="btn" onclick='buttonPlayPress()'>
+                      <i class="fa fa-play"></i>
+                    </button>
+
+                    <button type="button" id="button_stop" class="btn" onclick='buttonStopPress()'>
+                      <i class="fa fa-stop"></i>
+                    </button>
+
+                    <button type="button" id="button_fw" class="btn" onclick='buttonForwardPress()'>
+                      <i class="fa fa-forward"></i>
+                    </button>
+
+                    <button type="button" id="button_ffw" class="btn" onclick='buttonFastforwardPress()'>
+                      <i class="fa fa-fast-forward"></i>
+                    </button>
+                </div>
+            <h2 class="headerMusics">Musicas</h2>
+            <% for (var i=0;i<items.length;i++){ %>
+                <a class="btn btn-primary" name="<%= nItems[i] %>" href="<%= nItems[i] %>"><%= items[i]%></a><br><br>
+                <%};%>
+      </div>
+    </div>
   </body>
 </html>
