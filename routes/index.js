@@ -42,7 +42,14 @@ router.get('/arq', function(req, res, next){
     });
 });
 
+router.get('/musics/:music', function(req, res, next) {
 
+    // log each request to the console
+    res.send('this ' + req.params.music + '!');
+
+    // continue doing what we were doing and go to the route
+    next();
+});
 
 
 module.exports = router;

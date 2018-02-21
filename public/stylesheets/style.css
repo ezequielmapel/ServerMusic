@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0 auto;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  position: relative;
 }
 
 a {
@@ -31,9 +32,38 @@ body .headerPlayer{
 
 body .headerMusics{
   padding: 0 0 30px;
-  border-bottom: 1px solid #eeeeee;
+
 }
 
 body .musics{
   padding: 20px 100px;
+}
+
+/*BODY/SCROLL*/
+body .scroll{
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+/*BODY/CARD*/
+body .card{
+    border-bottom: 0px;
+    position: relative;
+}
+.scroll-bar{
+ display: block;
+ width: 100%;
+ position:relative;
+ overflow: auto;
+ height: 20em;
+}
+.scroll-bar::-webkit-scrollbar {
+    width: 1em;
+}
+
+
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
