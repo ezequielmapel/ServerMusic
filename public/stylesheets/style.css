@@ -67,3 +67,20 @@ body .card{
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
+
+body button{
+   background-color: rgba(250,250,250);
+   float: right;
+   position: relative;
+   width: 1em;
+   margin-right: 3px;
+
+}
+body button .fa{
+  font-size: 6pt;
+
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+}

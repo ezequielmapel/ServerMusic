@@ -32,31 +32,7 @@
 
       <div class="musics">
             <h2 class='headerPlayer'>Play</h2>
-                <div class="buttonPlayer">
-                    <button type="button" id="button_fbw" class="btn myBtn" onclick='buttonRewindPress()'>
-                      <i class="fa fa-fast-backward"></i>
-                    </button>
 
-                    <button type="button" id="button_bw" class="btn myBtn" onclick='buttonBackPress()'>
-                      <i class="fa fa-backward"></i>
-                    </button>
-
-                    <button type="button" id="button_play" class="btn myBtn" onclick='buttonPlayPress()'>
-                      <i class="fa fa-play"></i>
-                    </button>
-
-                    <button type="button" id="button_stop" class="btn myBtn" onclick='buttonStopPress()'>
-                      <i class="fa fa-stop"></i>
-                    </button>
-
-                    <button type="button" id="button_fw" class="btn myBtn" onclick='buttonForwardPress()'>
-                      <i class="fa fa-forward"></i>
-                    </button>
-
-                    <button type="button" id="button_ffw" class="btn myBtn" onclick='buttonFastforwardPress()'>
-                      <i class="fa fa-fast-forward"></i>
-                    </button>
-                </div>
 
 
             <h2 class="headerMusics">Musicas</h2>
@@ -70,9 +46,37 @@
                   <% for (var i=0;i<items.length;i++){ %>
                       <div class="card">
                        <div class="card-body">
-                      <a class="btn btn-primary" name="<%= nItems[i] %>" href="<%= nItems[i] %>"><%= items[i]%></a><br><br>
+
+                            <div class="button-play">
+                                <button type="button" id="button_fbw" class="btn myBtn" onclick='buttonRewindPress()'>
+                                  <i class="fa fa-fast-backward"></i>
+                                </button>
+
+                                <button type="button" id="button_bw" class="btn myBtn" onclick='buttonBackPress()'>
+                                  <i class="fa fa-backward"></i>
+                                </button>
+
+                                <button type="button" id="button_play" class="btn myBtn" onclick='buttonPlayPress()'>
+                                  <i class="fa fa-play"></i>
+                                </button>
+
+                                <button type="button" id="button_stop" class="btn myBtn" onclick='buttonStopPress()'>
+                                  <i class="fa fa-stop"></i>
+                                </button>
+
+                                <button type="button" id="button_fw" class="btn myBtn" onclick='buttonForwardPress()'>
+                                  <i class="fa fa-forward"></i>
+                                </button>
+
+                                <button type="button" id="button_ffw" class="btn myBtn" onclick='buttonFastforwardPress()'>
+                                  <i class="fa fa-fast-forward"></i>
+                                </button>
+                        </div>
+                      <a class="btn btn-primary" name="<%= nItems[i] %>" href="musics/<%= nItems[i]%>"><%= items[i]%></a><br><br>
+
+
                       </div>
-                      </div>
+                  </div>
                      <%};%>
                 </div>
         </div>
